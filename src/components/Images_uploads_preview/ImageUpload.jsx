@@ -3,9 +3,9 @@ import React, { useState } from 'react';
 const ImageUpload = () => {
   const [images, setImages] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
+  const [zoom, setZoom] = useState(1);
 
   const handleImageChange = (e) => {
-    setImages([])
     const files = Array.from(e.target.files);
     const validImages = files.filter(file => file.type.startsWith('image/'));
 
@@ -25,10 +25,20 @@ const ImageUpload = () => {
 
   const handleImageClick = (img) => {
     setSelectedImage(img.preview);
+    setZoom(1); // Reset zoom when opening
   };
 
   const handleCloseModal = () => {
     setSelectedImage(null);
+    setZoom(1);
+  };
+
+  const handleZoomIn = () => {
+    setZoom((z) => Math.min(z + 0.2, 3));
+  };
+
+  const handleZoomOut = () => {
+    setZoom((z) => Math.max(z - 0.2, 1));
   };
 
   return (
@@ -75,20 +85,42 @@ const ImageUpload = () => {
           onClick={handleCloseModal}
         >
           <div
-            className="relative max-w-2xl w-full p-4 bg-white rounded-lg shadow-lg"
+            className="relative max-w-3xl w-full p-4 bg-white rounded-lg shadow-lg"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Close Button */}
             <button
               onClick={handleCloseModal}
-              className="absolute top-2 right-2 text-white hover:bg-red-600 px-2 py-1 rounded"
+              className="absolute top-2 right-2 text-white bg-red-600 px-3 py-1 rounded"
             >
               X
             </button>
-            <img
-              src={selectedImage}
-              alt="Selected"
-              className="w-full h-auto max-h-[80vh] object-contain rounded"
-            />
+
+            {/* Zoom Controls */}
+            <div className="flex justify-center gap-3 mb-3">
+              <button
+                onClick={handleZoomOut}
+                className="bg-gray-300 px-3 py-1 rounded hover:bg-gray-400"
+              >
+                − Zoom Out
+              </button>
+              <button
+                onClick={handleZoomIn}
+                className="bg-gray-300 px-3 py-1 rounded hover:bg-gray-400"
+              >
+                + Zoom In
+              </button>
+            </div>
+
+            {/* Image Preview */}
+            <div className="overflow-auto flex justify-center">
+              <img
+                src={selectedImage}
+                alt="Selected"
+                style={{ transform: `scale(${zoom})` }}
+                className="transition-transform duration-200 max-h-[80vh] object-contain rounded"
+              />
+            </div>
           </div>
         </div>
       )}
