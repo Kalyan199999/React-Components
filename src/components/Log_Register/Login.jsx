@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+
 
 const Login = () => {
   const [form, setForm] = useState({ email: '', password: '' });
@@ -21,6 +23,7 @@ const Login = () => {
   return (
     <form onSubmit={handleSubmit}>
       <h2 className="text-xl font-semibold mb-4">Login</h2>
+      
       <div className="mb-3">
         <label className="block text-sm mb-1">Email</label>
         <input
@@ -29,8 +32,10 @@ const Login = () => {
           value={form.email}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
         />
+        
         {errors.email && <p className="text-red-500 text-sm">{errors.email}</p>}
       </div>
+
       <div className="mb-3">
         <label className="block text-sm mb-1">Password</label>
         <input
@@ -40,6 +45,7 @@ const Login = () => {
           onChange={(e) => setForm({ ...form, password: e.target.value })}
         />
         {errors.password && <p className="text-red-500 text-sm">{errors.password}</p>}
+
         <label className="text-xs mt-1 inline-flex items-center">
           <input
             type="checkbox"
@@ -49,12 +55,11 @@ const Login = () => {
           Show Password
         </label>
       </div>
-      <button
-        type="submit"
-        className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
-      >
-        Login
-      </button>
+      
+      <button type="submit" className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transform transition-transform duration-200 hover:scale-105">
+        Login 
+        </button>
+
     </form>
   );
 };

@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+
 
 const Register = () => {
   const [form, setForm] = useState({ email: '', password: '', confirm: '' });
@@ -60,12 +62,11 @@ const Register = () => {
           Show Password
         </label>
       </div>
-      <button
-        type="submit"
-        className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700"
-      >
-        Register
-      </button>
+
+      <button type="submit" className="w-full bg-green-600 text-white py-2 rounded hover:bg-green-700 transform transition-transform duration-200 hover:scale-105">
+        Login 
+        </button>
+
     </form>
   );
 };
