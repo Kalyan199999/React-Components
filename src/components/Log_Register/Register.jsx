@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { toast } from 'react-toastify';
+// import { motion } from 'framer-motion';
 
 
 const Register = () => {
@@ -18,7 +19,8 @@ const Register = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (validate()) alert('Registered successfully!');
+    if (validate()) toast.success("Registration successfull!"); 
+        else toast.error("Registration Failed!");
   };
 
   return (

@@ -12,7 +12,7 @@ const ImageUpload = () => {
     const newPreviews = validImages.map(file => ({
       file,
       preview: URL.createObjectURL(file),
-    }));
+    }));    
 
     setImages(prev => [...prev, ...newPreviews]);
   };

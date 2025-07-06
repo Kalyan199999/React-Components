@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { toast } from 'react-toastify';
+
 // import { motion } from 'framer-motion';
 
 
@@ -17,7 +19,8 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (validate()) alert('Login successful!');
+    if (validate()) toast.success("Login successfull!"); 
+    else toast.error("Login Failed!");
   };
 
   return (
