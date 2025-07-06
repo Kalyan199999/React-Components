@@ -39,13 +39,17 @@ const ImageSelectedPreview = ()=>{
         <div className="h-screen w-screen bg-gray-400 flex flex-col items-center pt-4">
 
 
-            <input 
-            type="file"
-            accept="image/*"
-            className="border-2 border-purple-500 h-10 cursor-pointer"
-            multiple
-            onChange={handleImageUpload}
-            />
+            <label className="cursor-pointer flex items-center gap-3 px-4 py-2 bg-purple-600 text-white rounded-md hover:bg-purple-700 transition">
+                <span>📷 Upload Images</span>
+                <input
+                  type="file"
+                  accept="image/*"
+                  multiple
+                  onChange={handleImageUpload}
+                  className="hidden"
+                />
+            </label>
+
 
             <div 
             className="w-[40vw] flex flex-row gap-2 justify-center items-center p-3"
