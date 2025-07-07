@@ -6,8 +6,9 @@ import MultiStepForm from './multi_form/MultiStepForm'
 import OtpInput from './otp/OtpInput'
 import Combined from './Log_Register/Combined'
 import ImageUpload from './Images_uploads_preview/ImageUpload'
-
 import ImageSelectedPreview from './Images_uploads_preview/Image_1'
+import MySliders from './image_sliders/MySliders'
+import MySwiperSlider_2 from './image_sliders/MySliders_2'
 
 function LoadComponents() {
   return (
@@ -16,7 +17,7 @@ function LoadComponents() {
     <ToastContainer position="bottom-right" autoClose={3000} pauseOnHover={false} hideProgressBar={true} />
     
       {/* <PasswordStrength /> */}
-      <MultiStepForm />
+      {/* <MultiStepForm /> */}
       {/* <Combined /> */}
       
       {/* <div className="min-h-screen flex items-center justify-center bg-gray-100">
@@ -28,6 +29,9 @@ function LoadComponents() {
       {/* <div className="min-h-screen bg-gray-100 flex items-center justify-center">
         <ImageUpload />
       </div> */}
+
+      <MySliders />
+      <MySwiperSlider_2 />
 
     </>
   )
