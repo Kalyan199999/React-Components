@@ -9,6 +9,7 @@ import ImageUpload from './Images_uploads_preview/ImageUpload'
 import ImageSelectedPreview from './Images_uploads_preview/Image_1'
 import MySliders from './image_sliders/MySliders'
 import MySwiperSlider_2 from './image_sliders/MySliders_2'
+import DragDropUploader from './dargdrop/DragDropUploader'
 
 function LoadComponents() {
   return (
@@ -30,8 +31,10 @@ function LoadComponents() {
         <ImageUpload />
       </div> */}
 
-      <MySliders />
-      <MySwiperSlider_2 />
+      {/* <MySliders />
+      <MySwiperSlider_2 /> */}
+
+      <DragDropUploader />
 
     </>
   )
