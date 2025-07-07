@@ -53,7 +53,6 @@ const DragDropUploader = () => {
       >
         <p className="font-medium">Drag & Drop Images Here</p>
         <p className="text-sm">or click to select manually</p>
-        
         <input
           type="file"
           multiple

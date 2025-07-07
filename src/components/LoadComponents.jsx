@@ -10,6 +10,9 @@ import ImageSelectedPreview from './Images_uploads_preview/Image_1'
 import MySliders from './image_sliders/MySliders'
 import MySwiperSlider_2 from './image_sliders/MySliders_2'
 import DragDropUploader from './dargdrop/DragDropUploader'
+import DraggableWrapper , {MultiDraggable}  from './dargdrop/DraggableWrapper '
+
+
 
 function LoadComponents() {
   return (
@@ -35,6 +38,8 @@ function LoadComponents() {
       <MySwiperSlider_2 /> */}
 
       <DragDropUploader />
+      {/* <MultiDraggable />
+      <DraggableWrapper /> */}
 
     </>
   )
