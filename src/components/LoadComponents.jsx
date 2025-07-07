@@ -16,13 +16,14 @@ function LoadComponents() {
     <ToastContainer position="bottom-right" autoClose={3000} pauseOnHover={false} hideProgressBar={true} />
     
       {/* <PasswordStrength /> */}
-      {/* <MultiStepForm /> */}
+      <MultiStepForm />
       {/* <Combined /> */}
       
       {/* <div className="min-h-screen flex items-center justify-center bg-gray-100">
         <OtpInput />
       </div> */}
-      <ImageSelectedPreview />
+
+      {/* <ImageSelectedPreview /> */}
 
       {/* <div className="min-h-screen bg-gray-100 flex items-center justify-center">
         <ImageUpload />

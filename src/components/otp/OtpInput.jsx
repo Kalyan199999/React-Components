@@ -1,5 +1,7 @@
 import { useRef, useState } from 'react';
 
+import { toast } from 'react-toastify';
+
 const OtpInput = () => {
   const [otp, setOtp] = useState(Array(6).fill(''));
   const inputRefs = useRef([]);
@@ -20,11 +22,14 @@ const OtpInput = () => {
     if (e.key === 'Backspace') {
       e.preventDefault(); // stop browser default backspace behavior
 
-      if (otp[index]) {
+      if (otp[index]) 
+        {
         const updatedOtp = [...otp];
         updatedOtp[index] = '';
         setOtp(updatedOtp);
-      } else if (index > 0) {
+      } 
+      else if (index > 0) 
+        {
         inputRefs.current[index - 1]?.focus();
         const updatedOtp = [...otp];
         updatedOtp[index - 1] = '';
@@ -36,9 +41,12 @@ const OtpInput = () => {
   const handleSubmit = () => {
     const enteredOtp = otp.join('');
     if (enteredOtp === '123456') {
-      alert('✅ OTP Verified');
+      // alert('✅ OTP Verified');
+      toast.success('OTP Verified');
+      setOtp(Array(6).fill(''))
     } else {
-      alert('❌ Invalid OTP');
+      // alert('❌ Invalid OTP');
+      toast.error('Invalid OTP');
     }
   };
 
