@@ -13,6 +13,10 @@ import DragDropUploader from './dargdrop/DragDropUploader'
 import DraggableWrapper , {MultiDraggable}  from './dargdrop/DraggableWrapper '
 
 import AudioPlayer from './audioplayer/AudioPlayer'
+import ThemeSwitcher from './contextUsage/UsingThemeContext';
+
+import LoginContext from './contextUsage/LoginContext'
+import ProfileContext from './contextUsage/ProfileContext'
 
 
 
@@ -43,7 +47,13 @@ function LoadComponents() {
       {/* <MultiDraggable />
       <DraggableWrapper /> */}
 
-      <AudioPlayer />
+      {/* <AudioPlayer /> */}
+      
+
+      <ThemeSwitcher />
+
+      <LoginContext/>
+      <ProfileContext />
 
     </>
   )
