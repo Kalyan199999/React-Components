@@ -12,6 +12,8 @@ import MySwiperSlider_2 from './image_sliders/MySliders_2'
 import DragDropUploader from './dargdrop/DragDropUploader'
 import DraggableWrapper , {MultiDraggable}  from './dargdrop/DraggableWrapper '
 
+import AudioPlayer from './audioplayer/AudioPlayer'
+
 
 
 function LoadComponents() {
@@ -37,9 +39,11 @@ function LoadComponents() {
       {/* <MySliders />
       <MySwiperSlider_2 /> */}
 
-      <DragDropUploader />
+      {/* <DragDropUploader /> */}
       {/* <MultiDraggable />
       <DraggableWrapper /> */}
+
+      <AudioPlayer />
 
     </>
   )
