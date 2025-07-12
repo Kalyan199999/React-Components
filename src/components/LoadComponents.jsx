@@ -18,6 +18,10 @@ import ThemeSwitcher from './contextUsage/UsingThemeContext';
 import LoginContext from './contextUsage/LoginContext'
 import ProfileContext from './contextUsage/ProfileContext'
 
+import LocationPicker from './maps/LocationPicker'
+
+import RouteMap from './maps/SourceDestination'
+
 
 
 function LoadComponents() {
@@ -50,10 +54,13 @@ function LoadComponents() {
       {/* <AudioPlayer /> */}
       
 
-      <ThemeSwitcher />
+      {/* <ThemeSwitcher />
 
       <LoginContext/>
-      <ProfileContext />
+      <ProfileContext /> */}
+
+      {/* <LocationPicker  /> */}
+      <RouteMap />
 
     </>
   )
